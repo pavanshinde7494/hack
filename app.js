@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var express = require('express');
 var path = require('path');
 require('dotenv/config');
+var cors= require('cors');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require("body-parser");
@@ -19,6 +20,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: "true" }));
 
 app.use(logger('dev'));
@@ -35,7 +37,9 @@ var doctorRouter = require('./routes/doctorRouter');
 var adminRouter = require('./routes/adminRouter');
 var loginRouter = require('./routes/loginRouter');
 var dr_dashboardRouter = require('./routes/dr_dashboardRouter');
+var patientRouter = require('./routes/patientRouter');
 app.use('/doctor', doctorRouter);
+app.use('/patient', patientRouter);
 app.use('/admin', adminRouter);
 app.use('/login', loginRouter);
 app.use('/dashboard', dr_dashboardRouter);
