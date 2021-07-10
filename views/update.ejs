@@ -3,51 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../stylesheets/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Document</title>
 </head>
-<body style="background-color:skyblue">
+<body class="bg">
+  <div id="container_update">
     <form  action="" method="POST" enctype="multipart/form-data">
-        <div class="container">
-          <div class="row">
-          <div class="col-md-6 form-group">
-        <label><h3>Username</h3></label>
-            <input type="text" name="username" class="form-control"  autocomplete="off" placeholder="<%= doctor.username %>" ><br>
-      </div>
-       <div class="col-md-6 form-group">
-        <label><h3>Name</h3></label>
-            <input type="text" name="name" class="form-control" placeholder="<%= doctor.name %>" ><br>
-          </div>
-  </div>
-  <div class="row">
-        <div class="col-md-6 form-group">
-        <label><h3>State</h3></label>
-      <input type="text" name="state" class="form-control" placeholder="<%= doctor.state %>"><br>
-    </div>
-        <div class="col-md-6 form-group">
-        <label><h3>district:</h3></label>
-      <input type="text" name="district" class="form-control" placeholder="<%= doctor.district %>"><br>
-    </div>
-  </div>
-  <div class="row">
-          <div class="col-md-6 form-group">
-        <label><h3>City:</h3></label>
-      <input type="text" name="city" class="form-control" placeholder="<%= doctor.name %>"><br>
-    </div>
-      <div class="col-md-6 form-group">
-        <label><h3>Hospital Name:</h3></label>
-      <input type="text" class="form-control" name="Hname" placeholder="<%= doctor.Hospital_name %>"><br>
-    </div>
-  </div>
-    <div class="form-group">
-        <label><h3>mobile</h3></label>
-       <input type="number" class="form-control" name="mobile" placeholder="<%= doctor.mobile %>"><br>
-    </div>
-      
-    <br><button type="submit"  class="btn btn-success btn-lg btn-block" name="submit" class="btn btn-success" value="submit">Update</button>
-  </div>
+            <label>email</label>
+            <input type="text" name="email"  value="<%= doctor.email %>" ><br><br>
+             <label>state</label>
+            <input type="text" name="state"  value="<%= doctor.state %>"><br><br>
+            <label>district</label>
+            <input type="text" name="district"  value="<%= doctor.district %>"><br><br>
+             <label>city</label>
+            <input type="text" name="city" value="<%= doctor.city %>"><br><br>
+             <label>Hospital Name</label>
+            <input type="text" name="Hname" value="<%= doctor.Hospital_name %>"><br><br>
+             <label>Mobile Number</label>
+             <input type="number" name="mobile" value="<%= doctor.mobile %>"><br><br>
+             <label>Degree_Certificate</label><input type="file" name="deg"><br> <br>
+            <input type="submit" value="Update"><br>
     </form>
+  </div>
 
 </body>
 </html>

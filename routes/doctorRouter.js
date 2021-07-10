@@ -47,6 +47,7 @@ doctorRouter.route('/')
         }
         //res.send(degre);
    var obj={
+    doc_no:1,
       username:req.body.username,
       password:req.body.password,
       DOB:req.body.DOB,
@@ -69,7 +70,7 @@ doctorRouter.route('/')
   .then((doc) => {
       //res.statusCode = 200;
       //res.setHeader("Content-Type" , 'application/json');
-      res.json(obj);
+      //res.json(obj);
   }), (err) => next(err)
   .catch((err) => next(err));
      

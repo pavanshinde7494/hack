@@ -11,7 +11,7 @@
 }
 
 #container_doctor {
-    width: 350px;
+    width: 400px;
     height: 1500px;
     background: inherit;
     position: absolute;
@@ -21,6 +21,45 @@
     margin-left: -175px;
     margin-top: -250px;
     border-radius: 8px;
+}
+#container_doctor:before {
+    width: 400px;
+    height: 1500px;
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    bottom: 0;
+    right: 0;
+    background: inherit;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
+    filter: blur(10px);
+}
+
+#container_update {
+    width: 400px;
+    height: 900px;
+    background: inherit;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -250px;
+    border-radius: 8px;
+}
+#container_update:before {
+    width: 400px;
+    height: 900px;
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    bottom: 0;
+    right: 0;
+    background: inherit;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
+    filter: blur(10px);
 }
 #selectedFiles{
     color:white;
@@ -45,19 +84,7 @@
     /* Firefox */
 }
 
-#container_doctor:before {
-    width: 400px;
-    height: 1500px;
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    bottom: 0;
-    right: 0;
-    background: inherit;
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
-    filter: blur(10px);
-}
+
 
 form {
     text-align: center;
